@@ -8,8 +8,7 @@ result =	{
   1: "Fighting",
   2:  "Burgulary",
 }
-
-app=Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 @app.route('/')
 
 @app.route("/", methods=['GET', 'POST'])
