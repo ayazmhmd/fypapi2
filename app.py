@@ -25,6 +25,7 @@ def get_output():
 	 vid_path = Vid.filename	
 	 Vid.save(vid_path)
 	 imges=prediction.video_capture(vid_path)
+	 print('hello')
 	 try:
 		 os.remove(vid_path)
 	 except:
