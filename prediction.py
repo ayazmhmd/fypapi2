@@ -41,7 +41,7 @@ def video_capture(vid_path):
 
 def check(images):
     new_model = tf.keras.models.load_model('3dcnn_weight.h5',compile = True)
-    test_img=np.expand_dims(images, axis=0)
+    test_img=images.reshape((-1, 60, 240, 320, 1))
     x=new_model.predict(test_img)
     b=np.argmax(x)
     print(b)
