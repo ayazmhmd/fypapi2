@@ -30,6 +30,6 @@ def get_output():
 		 os.remove(vid_path)
 	 except:
 		 pass
-	 return render_template("index.html", Pred = ret,cat=val, vid_name=Vid.filename)
+	 return render_template("index.html")
 if __name__=='__main__':
     app.run(debug=True)
