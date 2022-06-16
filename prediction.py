@@ -36,7 +36,6 @@ def video_capture(vid_path):
             counter=counter+1
         break
     vid_capture.release()
-    cv2.destroyAllWindows()
     return cat_images
 
 
