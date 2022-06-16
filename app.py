@@ -14,7 +14,7 @@ app = Flask(__name__)
 def main():
 	return render_template("index.html")
 
-@app.route("/submit", methods = ['GET', 'POST'])
+@app.route("/submit/", methods = ['GET', 'POST'])
 def get_output():
 	if request.method == 'POST': 
 	 Vid = request.files['my_video']
