@@ -23,8 +23,7 @@ def get_output():
 	 Vid.save(vid_path)
 	 imges=prediction.video_capture(vid_path)
 	 img=np.asarray(imges)	
-# 	 ret=prediction.check(img)
-	 ret=1
+ 	 ret=prediction.check(img)
 	 val=result[ret]
 	 print(val)
 	 try:
