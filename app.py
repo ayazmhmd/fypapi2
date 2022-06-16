@@ -8,7 +8,6 @@ result =	{
   1: "Fighting",
   2:  "Burgulary",
 }
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 app=Flask(__name__)
 @app.route('/')
@@ -35,4 +34,4 @@ def get_output():
 		 pass
 	 return render_template("index.html", Pred = ret,cat=val, vid_name=Vid.filename)
 if __name__=='__main__':
-    app.run(debug=True,use_reloader=False)
+    app.run(debug=True)
