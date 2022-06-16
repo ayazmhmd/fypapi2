@@ -30,9 +30,7 @@ def get_output():
 	 except:
 		 pass
 	 img=np.asarray(imges)	
-	 del(imges)
-	 gc.collect()
-	 ret=prediction.check(img)	
+	 ret=prediction.check(img)
 	 val=result[ret]
 	 print(val)
 	 return render_template("index.html", Pred = ret,cat=val, vid_name=Vid.filename)
