@@ -3,6 +3,7 @@ import tensorflow
 import numpy as np
 from flask import Flask, render_template, request
 import prediction
+import gc
 result =	{
   0: "Explosion",
   1: "Fighting",
@@ -29,6 +30,8 @@ def get_output():
 	 except:
 		 pass
 	 img=np.asarray(imges)	
+	 del(imges)
+	 gc.collect()
 	 ret=prediction.check(img)	
 	 val=result[ret]
 	 print(val)
